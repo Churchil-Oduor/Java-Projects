@@ -54,6 +54,28 @@
         currentNode.setNext(newNode);
       }
 
+
+      public void remove(String data) {
+
+                Node current = head;
+
+            if(current.getNext() != null) {
+                do{
+                    if(current.getNext().getNodeName().equalsIgnoreCase(data)) {
+
+                        current.setNext(current.getNext().getNext());
+                        break;
+                    }
+                    else{
+
+                        current = current.getNext();
+                    }
+                    
+                }
+                while(current.getNext() != null);
+            }
+      }
+
       public void peekListData(){
         Node headNode = head;
 
