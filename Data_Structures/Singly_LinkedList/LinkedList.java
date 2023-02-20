@@ -58,16 +58,26 @@
       public void remove(String data) {
 
                 Node current = head;
-
+               
             if(current.getNext() != null) {
                 do{
                     if(current.getNext().getNodeName().equalsIgnoreCase(data)) {
 
-                        current.setNext(current.getNext().getNext());
+                        /**
+                         * Delete the node to be removed and its data and 
+                         * redirect the pointer of the current node to the next node
+                         */
+                        Node nodeToRemove = current.getNext();
+                        current.setNext(current.getNext().getNext());                   
+                        nodeToRemove.setNext(null);
+                        nodeToRemove = null;
+
+                        
+
                         break;
                     }
                     else{
-
+                        
                         current = current.getNext();
                     }
                     
