@@ -6,6 +6,7 @@
      */
     private Node head;
     
+    //Consdtructor LinkedList
      LinkedList(){
         head = new Node("Head Node");
      }
