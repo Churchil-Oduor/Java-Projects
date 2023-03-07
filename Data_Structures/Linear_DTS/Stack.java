@@ -1,5 +1,3 @@
-package Data_Structures;
-
 
 class Stack{
 
